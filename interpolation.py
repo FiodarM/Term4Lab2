@@ -62,11 +62,11 @@ def eval_abcd(X, Y):
     d_main = 2. * (h[:-1] + h[1:])
     d_super = h[1:]
     data = (d_sub, d_main, d_super)
-    f = 3 * (dy[1:] / h[1:] - dy[:-1] / h[:-1])
+    f = 3. * (dy[1:] / h[1:] - dy[:-1] / h[:-1])
     a = Y[:-1]
     c = [0., 0.]
     c = np.insert(c, 1, tridiag_solve(data, f))
-    b = (dy / h) - h * (c[1:] + 2 * c[:-1]) / 3.
+    b = (dy / h) - h * (c[1:] + 2. * c[:-1]) / 3.
     d = (c[1:] - c[:-1]) / (3. * h)
 
     return a, b, c[:-1], d
