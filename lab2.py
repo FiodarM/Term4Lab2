@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 nodes = [-5., -4.69965, -3.64222, -1.33749, -1.0145, 2.46799, 3.]
 y = lambda x: x * np.sin(x)
 data = (nodes, y(nodes))
-divdiffs = eval_divdiffs(data)
 f_newton = newton_p(data)
 f_spline = cubic_spline(data)
 # sp_spline = InterpolatedUnivariateSpline(nodes, y(nodes))
