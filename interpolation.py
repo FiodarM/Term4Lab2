@@ -23,17 +23,20 @@ def eval_divdiffs(points):
     return divdiffs
 
 
-def newton_p(points, x, divdiffs=None):
+def newton_p(points):
     X, Y = points
 
-    if divdiffs is None:
-        divdiffs = eval_divdiffs(points)
+    divdiffs = eval_divdiffs(points)
 
-    f = divdiffs[-1]
-    for i, node in enumerate(X[:0:-1]):
-        f = divdiffs[-2 - i] + (x - X[-2 - i]) * f
+    def polynom(x):
 
-    return f
+        f = divdiffs[-1]
+        for i, node in enumerate(X[:0:-1]):
+            f = divdiffs[-2 - i] + (x - X[-2 - i]) * f
+
+        return f
+
+    return polynom
 
 
 def cubic_spline(points):
