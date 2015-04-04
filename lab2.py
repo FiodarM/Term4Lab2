@@ -10,7 +10,6 @@ data = (nodes, y(nodes))
 f_newton = newton_p(data)
 f_spline = cubic_spline(data)
 X = np.linspace(-6, 4, 300)
-
 fig1 = plt.figure(figsize=plt.figaspect(0.5))
 ax1, ax2 = fig1.add_subplot(121), fig1.add_subplot(122)
 ax1.set_title('Newton polynom')
