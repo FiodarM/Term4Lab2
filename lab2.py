@@ -1,7 +1,6 @@
 __author__ = 'fiodar'
 
 from interpolation import *
-from scipy.interpolate import InterpolatedUnivariateSpline
 import matplotlib.pyplot as plt
 
 
@@ -10,8 +9,6 @@ y = lambda x: x * np.sin(x)
 data = (nodes, y(nodes))
 f_newton = newton_p(data)
 f_spline = cubic_spline(data)
-# sp_spline = InterpolatedUnivariateSpline(nodes, y(nodes))
-# print sp_spline.get_coeffs()
 X = np.linspace(-6, 4, 300)
 
 fig1 = plt.figure(figsize=plt.figaspect(0.5))

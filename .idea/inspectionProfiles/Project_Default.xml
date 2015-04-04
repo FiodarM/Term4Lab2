@@ -9,19 +9,6 @@
         </list>
       </option>
     </inspection_tool>
-    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ignoredIdentifiers">
-        <value>
-          <list size="5">
-            <item index="0" class="java.lang.String" itemvalue="numpy.greater_equal" />
-            <item index="1" class="java.lang.String" itemvalue="numpy.less" />
-            <item index="2" class="java.lang.String" itemvalue="numpy.equal" />
-            <item index="3" class="java.lang.String" itemvalue="float.__getitem__" />
-            <item index="4" class="java.lang.String" itemvalue="list.*" />
-          </list>
-        </value>
-      </option>
-    </inspection_tool>
     <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
       <option name="processCode" value="true" />
       <option name="processLiterals" value="true" />
